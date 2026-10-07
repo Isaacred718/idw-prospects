@@ -38,7 +38,7 @@
 <body>
 <div class="wrap">
   <h1><span class="gold">IDW</span> Prospect Directory</h1>
-  <p class="sub">NYC-metro venues, production companies, and agencies that buy AV services. Public info only.</p>
+  <p class="sub">NYC-metro AV clients plus industry peers (fellow production companies: collaborators for crew and sub-rentals, competitors on bids). Public info only.</p>
   <div class="toolbar">
     <input id="q" type="search" placeholder="Search by name, area, or keyword…" autocomplete="off">
   </div>
@@ -49,15 +49,15 @@
 </div>
 <script>
 const PROSPECTS = [
-  // AV / event production companies
-  { name: "BML-Blackbird", type: "Production Co.", area: "Secaucus, NJ", site: "https://bmlblackbird.com", phone: "201-617-8900", fit: "Theatrical and event production with deep rental inventory, staffs large crews for NY and NJ events." },
-  { name: "WorldStage", type: "Production Co.", area: "Midtown Manhattan", site: "https://worldstage.com", phone: "212-582-2345", fit: "Corporate, theatrical, and artistic AV, regularly needs freelance audio, video, and lighting engineers." },
-  { name: "PRG", type: "Production Co.", area: "Secaucus, NJ", site: "https://prg.com", phone: "", fit: "Global production provider with NJ operations, constant demand for freelance production crew." },
-  { name: "4Wall Entertainment", type: "Production Co.", area: "New York metro", site: "https://4wall.com", phone: "", fit: "Lighting, audio, video, and rigging rentals plus production, uses freelance techs on shows." },
-  { name: "AVP.Live", type: "Production Co.", area: "New Jersey", site: "https://avp.live", phone: "", fit: "Corporate town halls and product launches across NJ, NYC, and Philly, crew-run productions." },
-  { name: "Summit AV", type: "Production Co.", area: "New Jersey", site: "https://summitavrental.com", phone: "", fit: "Full-service AV rental and event production for corporate events and conferences." },
-  { name: "Hellhound Audio", type: "Production Co.", area: "New York metro", site: "https://hellhoundaudio.com", phone: "", fit: "Event audio, lighting, staging, and power production, boutique shop that scales with freelancers." },
-  { name: "Mondo Media Solutions", type: "Production Co.", area: "New York, NY", site: "https://mmsproav.com", phone: "", fit: "Corporate AV production and integration with an event-heavy client base." },
+  // Industry peers: fellow AV/event production companies (collaborators + competitors)
+  { name: "BML-Blackbird", type: "Industry Peer", area: "Secaucus, NJ", site: "https://bmlblackbird.com", phone: "201-617-8900", fit: "Theatrical and event production with deep rental inventory, staffs large crews for NY and NJ events." },
+  { name: "WorldStage", type: "Industry Peer", area: "Midtown Manhattan", site: "https://worldstage.com", phone: "212-582-2345", fit: "Corporate, theatrical, and artistic AV, regularly needs freelance audio, video, and lighting engineers." },
+  { name: "PRG", type: "Industry Peer", area: "Secaucus, NJ", site: "https://prg.com", phone: "", fit: "Global production provider with NJ operations, constant demand for freelance production crew." },
+  { name: "4Wall Entertainment", type: "Industry Peer", area: "New York metro", site: "https://4wall.com", phone: "", fit: "Lighting, audio, video, and rigging rentals plus production, uses freelance techs on shows." },
+  { name: "AVP.Live", type: "Industry Peer", area: "New Jersey", site: "https://avp.live", phone: "", fit: "Corporate town halls and product launches across NJ, NYC, and Philly, crew-run productions." },
+  { name: "Summit AV", type: "Industry Peer", area: "New Jersey", site: "https://summitavrental.com", phone: "", fit: "Full-service AV rental and event production for corporate events and conferences." },
+  { name: "Hellhound Audio", type: "Industry Peer", area: "New York metro", site: "https://hellhoundaudio.com", phone: "", fit: "Event audio, lighting, staging, and power production, boutique shop that scales with freelancers." },
+  { name: "Mondo Media Solutions", type: "Industry Peer", area: "New York, NY", site: "https://mmsproav.com", phone: "", fit: "Corporate AV production and integration with an event-heavy client base." },
   // Event agencies / DMCs
   { name: "Empire Force Events", type: "Event Agency", area: "New York, NY", site: "https://empireforceevents.com", phone: "", fit: "Independent NYC DMC producing full-scale corporate events, outsources technical production." },
   { name: "23 Layers", type: "Event Agency", area: "New York, NY", site: "https://23layers.com", phone: "", fit: "Event planning and production firm running high-end corporate and social events." },
@@ -87,7 +87,7 @@ const PROSPECTS = [
   { name: "Redeemer Presbyterian", type: "House of Worship", area: "Manhattan", site: "https://redeemer.com", phone: "", fit: "Large Manhattan church with multiple services and production teams." },
   { name: "V1 Church", type: "House of Worship", area: "Manhattan, Brooklyn, Long Island, NJ", site: "https://v1church.com", phone: "", fit: "Fast-growing multi-site church with high-energy live production." }
 ];
-const TYPES = ["All", "Production Co.", "Event Agency", "Venue", "House of Worship"];
+const TYPES = ["All", "Event Agency", "Venue", "House of Worship", "Industry Peer"];
 let activeType = "All";
 
 function counts() {
